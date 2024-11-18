@@ -96,3 +96,65 @@ round_it(5.23, ndigits=0, strategy=decimal.ROUND_05UP)
 round_it(-5.23, ndigits=0, strategy=decimal.ROUND_05UP)
 round_it(5.25, ndigits=0, strategy=decimal.ROUND_05UP)
 round_it(-5.25, ndigits=0, strategy=decimal.ROUND_05UP)
+
+
+
+## FRACTIONS ##################################################################
+
+from fractions import Fraction
+
+PI = Fraction("22/7")
+PI = Fraction(22, 7)
+rad = 7
+circumference = 2 *  PI * rad
+
+print(circumference)
+
+print(22/7)
+
+
+two_third = Fraction(2, 3)
+one_tenth = Fraction(1, 10)
+one_tenth = Fraction("0.1")
+print(one_tenth)
+
+x = 639.21876
+fr = Fraction(x)
+print(fr)
+
+
+## COMPLEX Number #############################################################
+
+# A + iB
+from cmath import sqrt
+print(sqrt(-1))
+
+c = complex(3+5j)
+print(c)
+
+print(c.real)
+print(c.imag)
+
+print(c, c.conjugate(), c * c.conjugate())
+
+print(dir())
+
+print(dir(int))
+print(dir(str))
+
+s1 = "String"
+print(dir(s1))
+
+
+
+###############################################################################
+
+a = "Test"
+# b = "T"
+# b += "est"
+b = "Test"
+
+print(a, b)
+print(a == b)   # Equivalence - Value equality
+print(a is b)   # Equality - Object equality
+
