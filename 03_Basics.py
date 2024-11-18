@@ -36,7 +36,6 @@ def round_it(x, ndigits, strategy=decimal.ROUND_HALF_UP):
     dec_num = decimal.Decimal(str(x))
     decimal.getcontext().rounding = strategy
     rounded = dec_num.quantize(decimal.Decimal(f'1e-{ndigits}'))
-    # rounded = round(x, ndigits)
     print(f"round({dec_num}, {ndigits}, {strategy})".ljust(35), f" --> {rounded}")
     
 # towards '+inf'
