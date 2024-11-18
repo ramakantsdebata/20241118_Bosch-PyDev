@@ -40,7 +40,7 @@ def round_it(x, ndigits, strategy=decimal.ROUND_HALF_UP):
     
 # towards '+inf'
 round_it(4.2, ndigits=0, strategy=decimal.ROUND_CEILING)
-round_it(5.8, ndigits=0, strategy=decimal.ROUND_CEILING)
+round_it(-5.8, ndigits=0, strategy=decimal.ROUND_CEILING)
 print("")
 
 # towards '-inf'
