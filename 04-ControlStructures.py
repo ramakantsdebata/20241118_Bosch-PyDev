@@ -103,3 +103,8 @@ match random_number:
     case _:
         print("Out of range")
         
+
+def Test():
+    print("hi")
+
+print(type(Test))
