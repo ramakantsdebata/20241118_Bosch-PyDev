@@ -282,3 +282,28 @@ print(lst1)
 print(dt1)
 del dt1[4]
 print(dt1)
+
+## Tuple [Immutable] - Collection of non-homogeneous element
+t1 = tuple()
+t2 = tuple([1, 2, 3, 4, 5])
+
+t3 = (1, 2, 3, 4, 5); print(type(t3))
+
+lst1 = [1]; print(type(lst1))
+t4 = (1,); print(type(t4))
+
+t5 = (1, 2, [1, 2])
+print(t5)
+
+
+## Named Tuple
+from collections import namedtuple
+
+Point = namedtuple("Point", "x y")
+p1 = Point(10, 20)
+print(type(p1))
+print(p1[0], p1[1])
+print(p1.x, p1.y)
+
+points = [Point(1, 2), Point(10, 20), Point(100, 200)]
+print(points)
