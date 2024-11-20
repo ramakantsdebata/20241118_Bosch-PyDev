@@ -295,6 +295,7 @@
 
 
 ##################################
+# Closures
 
 def PowerOf(exponent):
     def worker(num):
