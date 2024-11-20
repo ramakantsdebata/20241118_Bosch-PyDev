@@ -1,5 +1,18 @@
 # 20241118_Bosch-PyDev
 
+## Notes
+### Virtual environments
+
+| Action                               | Command                             |
+|--------------------------------------|-------------------------------------|
+| **Create virtual environment**       | `python -m venv .env-trial`         |
+| **Activate virtual environment**     | `source .env-trial/Scripts/activate`|
+| **Deactivate virtual environment**   | `deactivate`                        |
+| **List installed packages**          | `pip list`                          |
+| **Install a package**                | `pip install multipledispatch`      |
+| **Install packages from requirements file** | `pip install -r req.txt`   |
+| **Export installed packages to requirements file** | `pip freeze > req_2.txt` |
+
 ## Links
 * [PEPs (Python Enhancement Proposals)](https://peps.python.org/)
 * [PEP-0008 (Style guide for Python Code)](https://peps.python.org/pep-0008/)
