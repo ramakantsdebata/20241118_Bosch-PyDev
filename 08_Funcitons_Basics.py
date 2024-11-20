@@ -21,3 +21,6 @@ t2 = Test()
 # add(t1, t2)
 
 
+## Define earlier vs. Define higher
+
+

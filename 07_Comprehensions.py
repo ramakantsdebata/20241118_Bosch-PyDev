@@ -21,8 +21,25 @@ obj = 10
 print(dir(obj))
 public_members = [member      for member in dir(obj)      if member.startswith("_") is False]
 print(len(public_members))
+
+# Using callable for Global functions
+test1 = 10
+def test2():
+    print("test2")
+
+print(f"{callable(test1)=}")
+print(f"{callable(test2)=}")
+
+print(str.capitalize("some string"))
+
+fn = str.capitalize
+print(f"{callable(fn)=}")
+# print(f"{callable(capitalize)=}")   # EXCEPTION -->NameError
+
+
 public_methods = [member      for member in dir(obj)      if member.startswith("_") is False and callable(getattr(obj, member))]
 print(len(public_methods))
 
 
 print(callable(getattr(str, "capitalize")))
+
