@@ -8,3 +8,5 @@
 * [Escape Sequences](https://docs.python.org/3/reference/lexical_analysis.html#escape-sequences)
 * [Format Specifiers](https://docs.python.org/3/library/string.html#formatspec)
 
+## Operational
+* [Training Feedback](https://forms.gle/DTWxhgtMDxm4q7zB6)
