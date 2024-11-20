@@ -189,30 +189,124 @@
 # Func(1, 2, x=3)
 
 
+# ## Special args
+# # '/' - args to left of this have to be positional
+# # '*' - args to right of this have to be keyworded
+
+# def Print(a, b, /, c, d, *, e, f):
+#     print(f"{a=}, {b=}, {c=}, {d=}, {e=}, {f=}")
+
+# # Print(1, 2, 3, 4, 5, 6)
+# Print(1, 2, 3, d=4, e=5, f=6)
+# # Print(a=1, b=2, c=3, d=4, e=5, f=6)
+
+# def KwFn(*, a, b=0, c):
+#     print(f"{a=}, {b=}, {c=}")
+
+# KwFn(a=1, b=2, c=3)
+# KwFn(a=1, c=3)
+
 #endregion
 
 #region Recursion
 
-num = 5
-res = 5 * 4 * 3 * 2 * 1
+# num = 5
+# res = 5 * 4 * 3 * 2 * 1
 
-def FactIterative(num):
-    prod = 1
-    for i in range(1, num+1):
-        prod *= i
-    return prod
+# def FactIterative(num):
+#     prod = 1
+#     for i in range(1, num+1):
+#         prod *= i
+#     return prod
 
-def FactRec(num):
+# def FactRec(num):
 
-    # Termination condition
-    if num == 1:
-        return 1
+#     # Termination condition
+#     if num == 1:
+#         return 1
     
-    prod = num * FactRec(num-1)
-    return prod
+#     prod = num * FactRec(num-1)
+#     return prod
 
-# print(FactIterative(num))
+# # print(FactIterative(num))
 
-print(FactRec(num))
+# print(FactRec(num))
+
+#endregion
+
+
+#region Scopes
+
+# LEGB
+
+####################################################
+# def Outer():
+#     # global s1
+#     s1 = "Outer String"
+#     def Inner():
+#         # global s1
+#         nonlocal s1
+#         s1 = "Inner String"
+#         print("Inner -->", s1)
+
+#     Inner()
+#     print("Outer -->", s1)
+
+# s1 = "Global String"
+# Outer()
+
+# print("Global -->", s1)
+########################################
+
+
+
+########################################
+# def Outer():
+#     # global s1
+#     s1 = "Outer String"
+#     print("Outer -->", s1)
+#     print(f"{locals()=}")
+#     print(f"{globals()=}")
+
+#     x = 10
+#     print(f"{locals()=}")
+
+#     globals()['s1'] = "Modified String"
+
+# s1 = "Global String"
+# Outer()
+
+# print("Global -->", s1)
+########################################
+
+
+# def Outer():
+#     s1 = "Outer String"
+#     print("Outer -->", s1)
+
+#     def Inner():
+#         # s1 = "Inner String"
+#         print("Inner -->", s1)
+
+#     return Inner
+
+# fn = Outer()
+# fn()
+
+
+##################################
+
+def PowerOf(exponent):
+    def worker(num):
+        return num**exponent
+    
+    return worker
+
+sq = PowerOf(2)
+cube = PowerOf(3)
+
+print(sq(2))
+print(cube(2))
+print(sq(2))
 
 #endregion
