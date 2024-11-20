@@ -120,4 +120,64 @@ print(add(*lst))            # ' *' prepended to a collection in the CALL unpacks
 
 
 
+# Packing 
+lst = [1, 2, 3]
+a, _, b = lst
+print(a, b)
+
+# for _ in range(5):
+#     print("Hi")
+
+
+lst = [1, 2, 3, 4]
+a, *ignore, b = lst
+
+print(a, b)
+print(type(ignore), ignore)
+
+a, *_, b = lst
+
+
+lst = [1, 2, 3, 4, 5, 6, 7]
+# a, *ig1, c, *ig2, b = lst   # <-- Error: Only one permitted
+
+
+def add(a, b, *data):         # Variable arg list
+    print(type(data), data)
+    sum = a + b
+    for val in data:
+        sum += val
+
+    return sum
+
+# print(add())
+# print(add(1))
+print(add(1, 2))
+print(add(1, 2, 3))
+print(add(1, 2, 3, 4))
+print(add(1, 2, 3, 4, 5))
+
+# (Pos, Kw, VarArg, KwVarArgs)
+
+def PrintEmp(ProjMgr, AccMgr, *names, **emps):
+    print(f"{ProjMgr=}, {AccMgr=}")
+    print(type(names), f"{names=}")
+    print(type(emps), f"{emps=}")
+    for name in emps.values():
+        print(name)
+
+PrintEmp("Manish", "Rakesh")
+PrintEmp(ProjMgr="Manish", AccMgr="Rakesh")
+PrintEmp(ProjMgr="Manish", AccMgr="Rakesh", SalesHead="Abhijeet")
+PrintEmp("Manish", "Rakesh", "Abhijeet")
+PrintEmp("Manish", AccMgr="Rakesh", SalesHead="Abhijeet")
+
+
+def Func(*args, **kwArgs):
+    print(f"{args=}", f"{kwArgs=}")
+
+Func()
+Func(1, 2)
+Func(1, 2, x=3)
+
 #endregion
