@@ -22,6 +22,8 @@
 * [Format Specifiers](https://docs.python.org/3/library/string.html#formatspec)
 * [Exceptions](https://docs.python.org/3/library/exceptions.html)
 * [Exception Hierarchy](https://docs.python.org/3/library/exceptions.html)
+* [XML Parsing using ElementTree module](https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree)
+* [JSON Parsing using the 'json' module](https://docs.python.org/3/library/json.html#module-json)
 
 ## Operational
 * [Training Feedback](https://forms.gle/DTWxhgtMDxm4q7zB6)
