@@ -41,14 +41,14 @@ def demo_os():
     new_file_path = os.path.join(new_dir_path, new_file)
 
     # Create the file
-    # try:
-    #     file = open(new_file_path, "w")
-    #     print(type(file))
-    #     # file.close()
-    # except Exception as ex:
-    #     print(f"EXCEPTION --> {ex!r}")
-    # finally:
-    #     file.close()
+    try:
+        file = open(new_file_path, "w")
+        print(type(file))
+        # file.close()
+    except Exception as ex:
+        print(f"EXCEPTION --> {ex!r}")
+    finally:
+        file.close()
 
     with open(new_file_path, mode="w") as file:
         # Write data into the file
@@ -66,6 +66,12 @@ def demo_os():
         file.seek(0, 0)
         s3 = file.readlines()
         print(type(s3), s3)
+
+    with open(new_file_path, mode="r") as file:
+        # Read file as an iterator
+        for line in file:
+            print(line, end='')
+
 
     # Remove the file
     if os.path.exists(new_file_path):
