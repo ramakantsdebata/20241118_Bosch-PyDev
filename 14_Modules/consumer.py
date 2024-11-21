@@ -30,15 +30,34 @@
 
 #############################################################################
 
-from greetings import *
-import greetings
+# from greetings import *
+# import greetings
 
-greet()
-greetName("Tom")
-
-
-greetings.prepGreeting("Hi", "Ramakant")
+# greet()
+# greetName("Tom")
 
 
+# greetings.prepGreeting("Hi", "Ramakant")
+
+############################################################################
 
 
+# from MyMath.arithmetic import add, mul
+# from MyMath.arithmetic import *
+# from MyMath.trig import *
+
+# print(add(1, 2))
+# print(mul(1, 2))
+# print(sine(10))
+
+
+# from MyMath import *
+
+# print(add(1, 2))
+# print(mul(1, 2))
+# print(sine(10))
+
+from MyMath import add
+
+print(add(1, 2))
+# print(mul(1, 2))
