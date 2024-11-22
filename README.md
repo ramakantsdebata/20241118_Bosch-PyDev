@@ -24,9 +24,14 @@
 * [Exception Hierarchy](https://docs.python.org/3/library/exceptions.html)
 * [XML Parsing using ElementTree module](https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree)
 * [JSON Parsing using the 'json' module](https://docs.python.org/3/library/json.html#module-json)
+* [Regular Expressions - 're' module](https://docs.python.org/3/library/re.html)
 
 ## Further Reading
 * Object-Oriented Analysis and Design with Applications (Addison-Wesley Object Technology Series) Hardcover – Illustrated, 1 April 2007 (by Ph.D. Young, Bobbi (Author), Grady Booch (Author), Jim Conallen (Author), Kelli Houston (Author), & 3 More)
 
 ## Operational
 * [Training Feedback](https://forms.gle/DTWxhgtMDxm4q7zB6)
+
+## Contact
+* ramakant.s.debata@gmail.com
+* +91-9923516767
